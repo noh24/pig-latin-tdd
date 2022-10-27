@@ -178,5 +178,3 @@ function pigLatin(text) {
   }
   return newTextArray.join(" ");
 }
-, . / /, ,
-string[string.length - 1] 
