@@ -117,7 +117,7 @@ function pigLatin(text) {
 // Code: 
 // Text: "queen tree umbrella";
 // pigLatin(text);
-// Expected Results: "eenquay reetay umbrellaway";
+// Expected Results: "eenquay eetray umbrellaway";
 
 let text = "queen tree umbrella";
 
@@ -141,3 +141,45 @@ function pigLatin(text) {
   }
   return newTextArray.join(" ");
 }
+// Test8: Take first letters for consonant words not including q or vowels, add to back + "ay"; 
+// Code: 
+// Text: "queen tree umbrella";
+// pigLatin(text);
+// Expected Results: "eenquay eetray umbrellaway";
+
+let text = "queen tree umbrella";
+
+function pigLatin(text) {
+  let textArray = text.split(" ");
+  const vowels = ["a", "e", "i", "o", "u"];
+  const exception = ["q", "u"];
+  let newTextArray = [];
+  let counter = 0;
+
+  for (let i = 0; i < textArray.length; i++) {
+    if ((textArray[i][0] + textArray[i][1]) === (exception[0] + exception[1])) {
+      let newText = textArray[i].substring(2) + exception[0] + exception[1] + "ay";
+      newTextArray.push(newText);
+      console.log(1);
+    } else if (vowels.includes(textArray[i][0])) {
+      newTextArray.push(textArray[i] + "way");
+    } else {
+      console.log("here");
+      for (let index = 0; index < textArray[i].length; index++) {
+        if (!vowels.includes(textArray[i][index])) {
+          counter += 1;
+          console.log(counter);
+        } else {
+          newTextArray.push(textArray[i].substring(counter) + textArray[i].substring(0, counter) + "ay");
+          break;
+        }
+      }
+    }
+  }
+  return newTextArray.join(" ");
+}
+, . / /, ,
+string[string.length - 1] 
+
+"Hello"["Hello".length - 1];
+'o'
