@@ -85,3 +85,24 @@ function pigLatin(text) {
 // Text: "queen tree umbrella";
 // pigLatin(text);
 // Expected Results: "eenquay tree umbrellaway";
+
+let text = "queen tree umbrella";
+
+function pigLatin(text) {
+  let textArray = text.split(" ");
+  const vowels = ["a", "e", "i", "o", "u"];
+  const exception = ["q", "u"];
+  let newTextArray = [];
+
+  for (let i = 0; i < textArray.length; i++) {
+    if ((textArray[i][0] + textArray[i][1]) === (exception[0] + exception[1])) {
+      let newText = textArray[i].substring(2) + exception[0] + exception[1] + "ay";
+      newTextArray.push(newText);
+    } else if (vowels.includes(textArray[i][0])) {
+      newTextArray.push(textArray[i] + "way");
+    } else {
+      newTextArray.push(textArray[i]);
+    }
+  }
+  return newTextArray.join(" ");
+}
