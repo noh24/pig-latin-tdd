@@ -180,6 +180,3 @@ function pigLatin(text) {
 }
 , . / /, ,
 string[string.length - 1] 
-
-"Hello"["Hello".length - 1];
-'o'
