@@ -59,9 +59,9 @@ Expected Results: "rapcay";
 
 Test8: Take first letters for consonant words not including q or vowels, add to back + "ay"; 
 Code: 
-Text: "crap chap";
+Text: "queen tree umbrella";
 pigLatin(text);
-Expected Results: "apcray apchay";
+Expected Results: "eenquay eetray umbrellaway";
 
 Test9: Test with whole passage:; 
 Code: 
