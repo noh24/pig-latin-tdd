@@ -35,7 +35,7 @@ Expected Results: "eenquay tree";
 
 Test4: If inputted letter is a vowel, return 1; 
 Code: 
-Text: "u";
+Text: "queen tree u";
 pigLatin(text);
 Expected Results: 1;
 
