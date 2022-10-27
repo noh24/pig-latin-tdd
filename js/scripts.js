@@ -9,6 +9,20 @@ const text = "queen";
 function pigLatin(text) {
   const exception = ["q", "u"];
   if ((text[0] + text[1]) === (exception[0] + exception[1])) {
+    return text.substring(2);
+  }
+  return -1
+}
+
+// Test2: Take letters "q" "u", put it in the back of inputted string + "ay"; 
+// Code: 
+// Text: "queen";
+// pigLatin(text);
+// Expected Results: "eenquay";const text = "queen";
+
+function pigLatin(text) {
+  const exception = ["q", "u"];
+  if ((text[0] + text[1]) === (exception[0] + exception[1])) {
     return 1
   }
   return -1
