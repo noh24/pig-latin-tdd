@@ -41,7 +41,7 @@ Expected Results: 1;
 
 Test5: If inputted word is vowel, add + way to end of inputted word; 
 Code: 
-Text: "umbrella queen";
+Text: "queen tree umbrella";
 pigLatin(text);
 Expected Results: "umbrellaway eenquay";
 
@@ -57,19 +57,13 @@ Text: "crap";
 pigLatin(text);
 Expected Results: "rapcay";
 
-Test8: Take first letters not including q or vowels, add to back + "ay"; 
-Code: 
-Text: "crap";
-pigLatin(text);
-Expected Results: "apcray";
-
-Test9: Take first letters for multiple words not including q or vowels, add to back + "ay"; 
+Test8: Take first letters for consonant words not including q or vowels, add to back + "ay"; 
 Code: 
 Text: "crap chap";
 pigLatin(text);
 Expected Results: "apcray apchay";
 
-Test8: Test with whole passage:; 
+Test9: Test with whole passage:; 
 Code: 
 Text: "In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit ­hole, and that means comfort.";
 pigLatin(text);
