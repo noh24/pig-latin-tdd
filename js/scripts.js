@@ -54,3 +54,34 @@ function pigLatin(text) {
   }
   return newTextArray.join(" ");
 }
+
+// Test4: If inputted words has first letter as a vowel; 
+// Code: 
+// Text: "queen tree u";
+// pigLatin(text);
+// Expected Results: "eenquay tree u"
+
+let text = "queen tree u";
+
+function pigLatin(text) {
+  let textArray = text.split(" ");
+
+  const exception = ["q", "u"];
+  let newTextArray = [];
+
+  for (let i = 0; i < textArray.length; i++) {
+    if ((textArray[i][0] + textArray[i][1]) === (exception[0] + exception[1])) {
+      let newText = textArray[i].substring(2) + exception[0] + exception[1] + "ay";
+      newTextArray.push(newText);
+    } else {
+      newTextArray.push(textArray[i]);
+    }
+  }
+  return newTextArray.join(" ");
+}
+
+// Test5: If inputted word is vowel, add + way to end of inputted word; 
+// Code: 
+// Text: "queen tree umbrella";
+// pigLatin(text);
+// Expected Results: "eenquay tree umbrellaway";
