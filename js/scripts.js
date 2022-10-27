@@ -4,7 +4,7 @@
 // pigLatin(text);
 // Expected Results: 1;
 
-const text = "queen";
+let text = "queen";
 
 function pigLatin(text) {
   const exception = ["q", "u"];
@@ -18,12 +18,14 @@ function pigLatin(text) {
 // Code: 
 // Text: "queen";
 // pigLatin(text);
-// Expected Results: "eenquay";const text = "queen";
+// Expected Results: "eenquay";
+
+let text = "queen";
 
 function pigLatin(text) {
   const exception = ["q", "u"];
   if ((text[0] + text[1]) === (exception[0] + exception[1])) {
-    return 1
+    return text.substring(2) + text[0] + text[1] + "ay";
   }
   return -1
 }
