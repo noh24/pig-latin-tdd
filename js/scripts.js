@@ -29,3 +29,28 @@ function pigLatin(text) {
   }
   return -1
 }
+
+// Test3: Take multiple words, check if "q" "u" is first two letters, only manipulate those words; 
+// Code: 
+// Text: "queen tree";
+// pigLatin(text);
+// Expected Results: "eenquay tree";
+
+let text = "queen tree";
+
+function pigLatin(text) {
+  let textArray = text.split(" ");
+
+  const exception = ["q", "u"];
+  let newTextArray = [];
+
+  for (let i = 0; i < textArray.length; i++) {
+    if ((textArray[i][0] + textArray[i][1]) === (exception[0] + exception[1])) {
+      let newText = textArray[i].substring(2) + exception[0] + exception[1] + "ay";
+      newTextArray.push(newText);
+    } else {
+      newTextArray.push(textArray[i]);
+    }
+  }
+  return newTextArray.join(" ");
+}
