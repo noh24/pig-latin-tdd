@@ -86,6 +86,12 @@ function pigLatin(text) {
 // pigLatin(text);
 // Expected Results: "eenquay tree umbrellaway";
 
+// Test6: If first letter of word is not q or vowels
+// Code: 
+// Text: "queen tree umbrella";
+// pigLatin(text);
+// Expected Results: "eenquay tree umbrellaway";
+
 let text = "queen tree umbrella";
 
 function pigLatin(text) {
@@ -106,3 +112,9 @@ function pigLatin(text) {
   }
   return newTextArray.join(" ");
 }
+
+// Test7: Inputted word that doesn't have q or vowels, take first letter and add it to the back + "ay" ;
+// Code: 
+// Text: "queen tree umbrella";
+// pigLatin(text);
+// Expected Results: "eenquay reetay umbrellaway";
