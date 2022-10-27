@@ -15,7 +15,7 @@ qu exception
 ```
 Describe: pigLatin();
 
-Test1: Take one word input to grab first two letters that is "q" "u";
+Test1: Take one word input to take out first two letters that is "q" "u";
 Code: 
 Text: "queen";
 pigLatin(text);
